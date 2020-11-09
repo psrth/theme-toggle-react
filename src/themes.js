@@ -1,7 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
-const primaryColor = "#1da7ea";
-const secondaryColor = "#000";
+// only place where you need to change the colours
+const primaryColor = "#94dccc";
+const secondaryColor = "#fff";
 
 export const lightTheme = {
   body: primaryColor,
@@ -21,7 +22,7 @@ export const GlobalStyles = createGlobalStyle`
 	body {
         background-color: ${(props) => props.theme.body};
     }
-    .card{
+    .invert{
         background-color: ${(props) => props.theme.cardColor};
         color: ${(props) => props.theme.cardFontColor};
     }

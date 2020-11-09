@@ -10,8 +10,8 @@ const Nav = styled.div`
 `
 
 const NavItem = styled.a`
-    text-decoration: none;
-    margin: 0 15px;
+    text-decoration: underline;
+    margin: 0 0  0 80px;
     font-size: 18px;
     font-weight: 600;
     color: inherit;
@@ -21,7 +21,7 @@ const NavItem = styled.a`
 export default () => (
     <Nav>
         <h1>Microsoft Learn Student Ambassadors</h1>
-        <NavItem>Link 1</NavItem>
-        <NavItem>Link 2</NavItem>
+        <NavItem>Home Page</NavItem>
+        <NavItem>About Page</NavItem>
     </Nav>
 )

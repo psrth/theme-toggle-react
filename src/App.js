@@ -3,6 +3,7 @@ import "./App.css";
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./themes.js";
 import Navbar from "./components/Navbar.js"
+import Form from "./components/Form.js"
 import Card from "./components/Card.js"
 
 const StyledApp = styled.div`
@@ -12,6 +13,15 @@ const StyledApp = styled.div`
 const Toggle = styled.div `
   display: flex;
   justify-content: center;
+`
+const Button = styled.button `
+  background-color: inherit;
+  border-radius: 15px;
+  border: 1px solid white;
+  color: inherit;
+  font-size: 1rem;
+  margin: 1em 1em;
+  padding: 1rem;
 `
 
 function App() {
@@ -26,8 +36,9 @@ function App() {
       <GlobalStyles />
       <StyledApp>
         <Navbar />
-        <Toggle><button onClick={() => themeToggler()}>Change Theme</button></Toggle>
+        <Toggle><Button className="invert" onClick={() => themeToggler()}><strong>Change Theme</strong></Button></Toggle>
         <Card />
+        <Form />
       </StyledApp>
     </ThemeProvider>
   );
