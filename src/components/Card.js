@@ -9,7 +9,7 @@ border-radius: 20px;
 padding: 3rem;
 `
 const Centre = styled.div`
-    margin: 2rem;
+    margin: 1rem;
     display: flex;
     justify-content: center;
 `

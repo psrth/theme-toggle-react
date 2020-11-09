@@ -26,8 +26,8 @@ export default () => (
         <Link to="/">
             <NavItem className="invert">Home Page</NavItem>
         </Link>
-        <Link to="/register">
-            <NavItem className="invert">Register Now</NavItem>
+        <Link to="/contact">
+            <NavItem className="invert">Contact Us</NavItem>
         </Link>
     </Nav>
 )

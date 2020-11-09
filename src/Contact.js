@@ -4,7 +4,7 @@ import Form from "./components/Form.js"
 import Card from "./components/Card.js"
 
 
-function Register(){
+function Contact(){
     return(
         <div>
             <Form />
@@ -12,5 +12,5 @@ function Register(){
     )
 }
 
-export default Register;
+export default Contact;
 
