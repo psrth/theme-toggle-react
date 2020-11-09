@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
 
 const Nav = styled.div`
     width: 100%;
     height: 6rem;
     display: flex;
+    background-color: inherit;
     align-items: center;
     justify-content: center;
 `
@@ -19,9 +21,13 @@ const NavItem = styled.a`
 `
 
 export default () => (
-    <Nav>
+    <Nav className="invert">
         <h1>Microsoft Learn Student Ambassadors</h1>
-        <NavItem>Home Page</NavItem>
-        <NavItem>About Page</NavItem>
+        <Link to="/">
+            <NavItem className="invert">Home Page</NavItem>
+        </Link>
+        <Link to="/register">
+            <NavItem className="invert">Register Now</NavItem>
+        </Link>
     </Nav>
 )

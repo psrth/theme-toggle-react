@@ -3,8 +3,9 @@ import "./App.css";
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./themes.js";
 import Navbar from "./components/Navbar.js"
-import Form from "./components/Form.js"
-import Card from "./components/Card.js"
+import Home from "./Home.js"
+import Register from "./Register.js"
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const StyledApp = styled.div`
   color: ${(props) => props.theme.fontColor};
@@ -32,15 +33,20 @@ function App() {
   };
 
   return (
+    <Router>
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
       <StyledApp>
         <Navbar />
         <Toggle><Button className="invert" onClick={() => themeToggler()}><strong>Change Theme</strong></Button></Toggle>
-        <Card />
-        <Form />
+        
+        <Switch>
+          <Route path="/" exact component={Home}></Route>
+          <Route path="/register" component={Register}></Route>
+        </Switch>
       </StyledApp>
     </ThemeProvider>
+    </Router>
   );
 }
 
